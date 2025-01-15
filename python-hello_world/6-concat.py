@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 str1 = "Welcome "
 str2 = "to Holberton School!"
-print(str1 + str2)
+# Combine str1 and str2 and print the result
+print(f"{str1}{str2}")
