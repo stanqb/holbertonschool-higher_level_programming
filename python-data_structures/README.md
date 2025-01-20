@@ -76,7 +76,7 @@ Ce projet est une introduction pratique aux structures de données en Python, no
 - La gestion d'erreurs doit être faite sans utiliser try/except
 
 ## Auteur
-[Stan QUEUNIEZ]
+- Stan QUEUNIEZ
 
 ## Licence
 Ce projet fait partie du curriculum de Holberton School.
