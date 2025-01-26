@@ -31,8 +31,8 @@ Not a string argument
 Missing one argument
 ====================
 
-	>>> say_my_name("Juan")
-	My name is Juan 
+	>>> say_my_name("Stan")
+	My name is Stan
 
 Missing both arguments
 ======================
