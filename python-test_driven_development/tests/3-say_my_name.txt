@@ -1,33 +1,36 @@
 The "3-say_my_name" module
 ==========================
 
-Using "say_my_name"
--------------------
+Using the say_my_name function
+------------------------------
+
 >>> say_my_name = __import__("3-say_my_name").say_my_name
 
->>> say_my_name("John", "Smith")
-My name is John Smith
+# Valid cases
+>>> say_my_name("Jane", "Doe")
+My name is Jane Doe
 
->>> say_my_name("John",)
+>>> say_my_name("John")
 My name is John 
 
->>> say_my_name(,"Smith")
-Traceback (most recent call last):
-...
-SyntaxError: invalid syntax
+>>> say_my_name("Alice", "")
+My name is Alice 
 
->>> say_my_name("John", 12)
-Traceback (most recent call last):
-...
-TypeError: last_name must be a string
-
->>> say_my_name(12, "Smith")
+# Invalid cases
+>>> say_my_name(10, "Smith")
 Traceback (most recent call last):
 ...
 TypeError: first_name must be a string
 
->>> say_my_name("12", "Smith")
-My name is 12 Smith
+>>> say_my_name("Max", False)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name([], {})
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
 
 >>> say_my_name()
 Traceback (most recent call last):
