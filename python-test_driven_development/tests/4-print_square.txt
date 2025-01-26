@@ -1,0 +1,65 @@
+The ``4-print_square`` module
+======================
+
+Using ``print_square``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``print_square`` from the ``4-print_square`` module:
+
+	>>> print_square = __import__("4-print_square").print_square
+
+Now use it:
+
+Regular case
+============
+
+	>>> print_square(4)
+	####
+	####
+	####
+	####
+
+	>>> print_square(10)
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+
+	>>> print_square(0)
+
+	>>> print_square(1)
+	#
+
+Negative argument
+=================
+
+	>>> print_square(-1)
+	Traceback (most recent call last):
+    	ValueError: size must be >= 0
+
+Not a number argument
+=====================
+
+	>>> print_square('a')
+	Traceback (most recent call last):
+    	TypeError: size must be an integer
+
+Not an integer argument
+=======================
+
+	>>> print_square(-2.3)
+	Traceback (most recent call last):
+    	TypeError: size must be an integer
+
+Missing argument
+================
+
+	>>> print_square()
+	#
