@@ -1,0 +1,38 @@
+The ``5-text_indentation`` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``text_indentation`` from the ``5-text_indentation`` module:
+
+	>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Now use it:
+
+Regular case
+============
+
+	>>> text_indentation("Hello world. Who's there? Just me: Juan")
+	Hello world.
+	<BLANKLINE>
+	Who's there?
+	<BLANKLINE>
+	Just me:
+	<BLANKLINE>
+	Juan
+
+Not a string argument
+=====================
+
+	>>> text_indentation(10)
+	Traceback (most recent call last):
+    	TypeError: text must be a string
+
+Missing argument
+================
+
+	>>> text_indentation()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
