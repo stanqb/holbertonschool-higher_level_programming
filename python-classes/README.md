@@ -1,41 +1,17 @@
-# Classes Python
-
-## Description
-Ce projet explore les concepts fondamentaux de la Programmation Orientée Objet (POO) en Python. Il se concentre sur la création et la manipulation de classes, avec un accent particulier sur la classe `Square`.
-
-## Objectifs d'apprentissage
-À la fin de ce projet, vous devriez être capable d'expliquer :
-* Les principes de base de la POO
-* La différence entre une classe et un objet
-* Les attributs et méthodes
-* L'utilisation des attributs publics, protégés et privés
-* Les getters et setters en Python
-* L'encapsulation et l'abstraction des données
-
-## Prérequis
-* Ubuntu 20.04 LTS
-* Python 3.8.5
-* Pycodestyle 2.7.*
-
-## Structure du projet
-Le projet contient plusieurs fichiers, chacun introduisant de nouveaux concepts :
-
-* `0-square.py` : Création d'une classe vide
-* `1-square.py` : Ajout d'un attribut privé
-* `2-square.py` : Validation de la taille
-* `3-square.py` : Calcul de l'aire
-* `4-square.py` : Accès et mise à jour d'attribut privé
-* `5-square.py` : Impression d'un carré
-* `6-square.py` : Coordonnées d'un carré
+ d'un carré
+ * `6-square.py` : Coordonnées d'un carré
 
 ## Configuration requise
-```bash
+- bash
+
 # Installation de Python 3.8.5
-sudo apt-get update
-sudo apt-get install python3.8
+- sudo apt-get update
+- sudo apt-get install python3.8
 
 # Installation de Pycodestyle
-pip3 install pycodestyle==2.7.*
+
+- pip3 install pycodestyle==2.7.*
+
 
 ## Style de code
 * Tous les fichiers doivent commencer par `#!/usr/bin/python3`
