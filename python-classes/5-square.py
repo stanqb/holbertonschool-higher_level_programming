@@ -1,75 +1,58 @@
 #!/usr/bin/python3
-"""The Square
+"""Module 5-square: Definition of the Square class.
 
-definition of the square
+This module class Square that defines a square by: (based on 4-square.py)
 
 """
 
 
 class Square:
-    """a 2d square
-
-    methods for manipulating it
+    """Square with size
 
     """
-
-    @property
-    def size(self):
-        """int: length of square sides
-
-        The setter validates that the size is an integer and is 0 or greater
-
-        """
-
-        return self.__size
-
-    @size.setter
-    def size(self, value):
-        if type(value) != int:
-            raise TypeError("size must be an integer")
-        if value < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = value
-
     def __init__(self, size=0):
-        """Creates a square of a given size
-
-        Size of the square is hidden
-
-        Args:
-            size (int): length of the sides
-
-        Raises:
-            TypeError: size is not an integer
-            ValueError: size is negative
-
+        """
+        give the size
         """
 
         if type(size) is not int:
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = size
+            raise TypeError('size must be an integer')
+        elif size < 0:
+            raise ValueError('size must be >= 0')
+        else:
+            self.__size = size
 
     def area(self):
-        """Returns the size of square
-
-        Returns:
-            size squared for area
-
         """
+        give the area of the square
+        """
+        return (self.__size * self.__size)
 
-        return self.__size ** 2
+    @property
+    def size(self):
+        """
+        give the size of the square
+        """
+        return (self.__size)
+
+    @size.setter
+    def size(self, size):
+        """
+        set the size
+        """
+        if type(size) is not int:
+            raise TypeError('size must be an integer')
+        elif size < 0:
+            raise ValueError('size must be >= 0')
+        else:
+            self.__size = size
 
     def my_print(self):
-        """Prints out a grid of #'s representing the sqaure
-
-        prints a blank line if size is 0
-
         """
-
+        print the square
+        """
         if self.__size == 0:
             print()
         else:
-            for i in range(self.__size):
+            for _ in range(self.__size):
                 print("#" * self.__size)
