@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Defines an empty class Rectangle."""
+"""0-rectangle: this exercice defines
+an empty class Rectangle."""
 
 
 class Rectangle:
