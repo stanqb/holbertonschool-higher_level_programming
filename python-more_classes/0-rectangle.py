@@ -1,12 +1,7 @@
-"""Module 0-Rectangle: Definition of the Rectangle class.
-
-This module is class Rectangle that defines a Rectangle.
-
-"""
+#!/usr/bin/python3
+"""Defines an empty class Rectangle."""
 
 
 class Rectangle:
-    """Rectangle with nothing
-
-    """
+    """Empty class that defines a rectangle."""
     pass
