@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Module of geometry.
+Module containing geometry-related classes:
+BaseGeometry, Rectangle, and Square.
 """
 
 
@@ -16,11 +17,6 @@ class BaseGeometry():
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
-
-
-"""
-Module of rectangle.
-"""
 
 
 class Rectangle(BaseGeometry):
@@ -47,6 +43,7 @@ class Square(Rectangle):
     def __init__(self, size):
         self.integer_validator("size", size)
         super().__init__(size, size)
+        self.__size = size  # Ajout de l'attribut privé size
 
     def area(self):
         return super().area()
