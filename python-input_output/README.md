@@ -68,9 +68,6 @@ Un projet axé sur la manipulation des fichiers et les opérations JSON en Pytho
 * Fonction qui retourne la représentation du triangle de Pascal
 
 ## Auteur
-* Projet pour l'École Holberton
-
-## Author
 * Stan QUEUNIEZ
 
 ## Licence
