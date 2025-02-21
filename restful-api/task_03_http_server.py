@@ -1,11 +1,15 @@
 #!/usr/bin/python3
+"""Simple HTTP Server with multiple endpoints."""
+
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
 
 
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
+    """Handles GET requests for different endpoints."""
+
     def do_GET(self):
-        """Gère les requêtes GET pour différents endpoints."""
+        """Handles GET requests based on the requested path."""
         if self.path == "/":
             self.send_response(200)
             self.send_header("Content-type", "text/plain")
@@ -21,23 +25,22 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
         elif self.path == "/status":
             self.send_response(200)
-            self.send_header("Content-type", "application/json")
+            self.send_header("Content-type", "text/plain")
             self.end_headers()
-            status = {"status": "OK"}
-            self.wfile.write(json.dumps(status).encode())
+            self.wfile.write(b"OK")  # Correction ici
 
         else:
             self.send_response(404)
-            self.send_header("Content-type", "application/json")
+            self.send_header("Content-type", "text/plain")  # Correction ici
             self.end_headers()
-            error_message = {"error": "Endpoint not found"}
-            self.wfile.write(json.dumps(error_message).encode())
+            self.wfile.write(b"Endpoint not found")
 
 
 def run(server_class=HTTPServer,
         handler_class=SimpleHTTPRequestHandler, port=8000):
-    """Lance le serveur HTTP sur le port spécifié."""
-    server_address = ("", port)
+
+    """Starts the HTTP server on localhost:8000."""
+    server_address = ("localhost", port)  # Correction ici
     httpd = server_class(server_address, handler_class)
     print(f"Serving HTTP on port {port}...")
     httpd.serve_forever()
